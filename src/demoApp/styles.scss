@@ -24,6 +24,7 @@ header h3 {
     display: inline-block;
     vertical-align: middle;
     padding-left: 15px;
+    margin-top: 10px;
 }
 
 .nav-item {
@@ -55,12 +56,15 @@ header h3 {
 }
 
 main {
-    padding: 20px;
+    position: relative;
     overflow:hidden;
 }
 
 .main-panel {
-    height: 100%;
+    position: absolute;
+    margin: 20px;
+    top: 0;
+    bottom: 0;
 }
 
 .panel-body {
@@ -68,7 +72,7 @@ main {
 }
 
 .long-text {
-    overflow-y:scroll;
+    overflow-y:auto;
     padding: 5px;
 }
 
