@@ -3,7 +3,7 @@
     <header flx-row size="auto" switchSize="small" verticalAlignment="center" itemsSeparation="between">
       <div [flxClass]="{'small-logo': 'extraSmall|small', 'centered': 'small'}">
         <img class="header-logo" src="../assets/images/angular.png">
-        <h4>Demo App</h4>
+        <h3>Demo App</h3>
       </div>
       <nav flx-row size="50%" [flxClass]= "{'small-menu': 'extraSmall|small'}">
         <a class="nav-item" [flxClass]= "{'separted-nav-item': 'medium|large'}" href="#">Home</a>
@@ -13,11 +13,20 @@
         <a class="nav-item" [flxClass]= "{'separted-nav-item': 'medium|large'}" href="#">Page 4</a>
       </nav>
     </header>
-    <flx-row switchSize="small" style="height: 100%">
+    <flx-row switchSize="small">
       <main flx-column>
         <div class="panel panel-default main-panel">
-          <div class="panel-body">
-            Main Content
+          <div flx-panel orientation="vertical" class="panel-body">
+            <h4>Main Content <small>Current Size: {{deviceSize[service.currentDeviceSize]}}</small></h4>
+            <hr/>
+            <section class="long-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia fringilla libero, vel luctus sem rhoncus at. Morbi maximus posuere felis, sit amet blandit felis malesuada ut. Nullam tristique venenatis rutrum. Sed volutpat at sapien sed sodales. Nam tincidunt, arcu nec sagittis consectetur, odio odio varius lacus, in convallis ligula lectus a mauris. Maecenas ut tellus congue, tristique orci lacinia, accumsan dolor. Aliquam et tempor quam. Donec eget consequat ipsum. Vivamus tempor sem tempor, molestie sem pharetra, tincidunt ante. Ut ut ipsum gravida, imperdiet velit non, pretium libero.</p>
+              <p>Cras efficitur ultricies lectus, in dignissim urna ornare nec. Ut iaculis efficitur diam, vitae pretium odio efficitur non. Suspendisse quis est non ipsum dignissim sollicitudin. Donec vel commodo sapien, sed sodales orci. Curabitur et lacus vehicula, volutpat ex vitae, tincidunt risus. Nullam at ante et massa porttitor eleifend. In tempus ipsum in justo porttitor tincidunt. Nunc ipsum lacus, molestie in tempus eget, fringilla vel nulla. In pretium vel urna eget dictum. Donec fringilla lobortis gravida. Vivamus sed metus ac magna aliquet pulvinar. Cras neque nisi, semper in sapien et, vulputate dignissim nisl. Maecenas neque sapien, pharetra ac turpis vitae, convallis vehicula risus. Donec tincidunt elit in sem blandit egestas. Duis aliquet leo vel aliquet aliquam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+              <p>Quisque eu imperdiet est, et semper lectus. Nulla mattis elementum tincidunt. Aenean odio felis, venenatis quis blandit a, feugiat pretium felis. Suspendisse potenti. Cras faucibus turpis ut tincidunt aliquam. Cras sit amet tincidunt mauris, sed elementum nisi. In vulputate blandit diam auctor commodo. Mauris in urna lacinia odio convallis rhoncus a et lacus. Integer bibendum tincidunt pharetra. Nullam auctor id eros vel elementum. Etiam maximus in velit a sodales. Curabitur dictum metus nec nisi porttitor varius. Nunc interdum malesuada lacus, non finibus felis iaculis nec.</p>
+              <p>Ut nibh eros, rutrum eget luctus quis, interdum sed turpis. Suspendisse egestas ac nisl non ultrices. Integer efficitur id ex sit amet luctus. Maecenas id justo a ligula dictum laoreet sed in ligula. Cras at rutrum magna. Quisque lorem ligula, aliquam in tristique non, dignissim eget ligula. Phasellus viverra lectus libero, vel ultricies nibh convallis et.</p>
+              <p>Donec non fermentum lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed blandit maximus dolor, fringilla suscipit neque eleifend at. Donec at massa porttitor, finibus ligula sit amet, ullamcorper est. Fusce mollis erat vitae leo maximus, sed pretium magna blandit. Ut efficitur ullamcorper neque, nec molestie ligula dictum eget. Pellentesque rutrum augue vel quam volutpat euismod. Morbi posuere, nunc id hendrerit rutrum, velit urna tincidunt libero, eget maximus lorem sapien et nisl. Nullam tempor enim purus, non interdum nibh consectetur ac. Suspendisse faucibus luctus aliquam. In luctus vestibulum faucibus. Quisque eu arcu purus. Mauris dictum felis egestas, placerat nulla in, molestie ipsum.</p>
+              <p>Proin et egestas dolor. Cras fringilla vulputate vulputate. Donec rhoncus mollis ligula. Nulla efficitur, turpis ac cursus malesuada, metus massa hendrerit quam, sit amet sollicitudin massa ligula non sapien. Vestibulum accumsan viverra purus. Nulla non tortor interdum, porta nulla ac, tristique ipsum. Maecenas vel eleifend leo. Suspendisse turpis nibh, ultricies non ullamcorper ac, interdum vel odio. Fusce eget felis vel felis commodo placerat nec ac felis. Integer et quam eget ex iaculis pulvinar. Etiam pretium purus nec lacus dapibus semper. Donec nisi dui, egestas nec porttitor eget, dictum eu enim. Aliquam aliquet porttitor aliquam. Nullam nisl sem, hendrerit non metus id, fermentum luctus risus. Donec sollicitudin quam at pretium convallis.</p>
+            </section>
           </div>
         </div>
       </main>

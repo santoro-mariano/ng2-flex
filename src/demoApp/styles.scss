@@ -20,9 +20,10 @@ header{
     width: 70px;
 }
 
-header h4 {
+header h3 {
     display: inline-block;
     vertical-align: middle;
+    padding-left: 15px;
 }
 
 .nav-item {
@@ -55,10 +56,20 @@ header h4 {
 
 main {
     padding: 20px;
+    overflow:hidden;
 }
 
 .main-panel {
     height: 100%;
+}
+
+.panel-body {
+    height: 100%;
+}
+
+.long-text {
+    overflow-y:scroll;
+    padding: 5px;
 }
 
 aside {
