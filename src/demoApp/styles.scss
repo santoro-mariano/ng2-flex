@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+header{
+    color: #EFEFEF;
+    background-color: #222;
+    min-height: 50px;
+    padding: 10px 5px;
+}
+
+.header-logo {
+    display: inline-block;
+    width: 70px;
+}
+
+header h4 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav-item {
+    background-color: #9C001B;
+    color: #EFEFEF;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    height: 35px;
+}
+
+.nav-item:hover , .nav-item:focus {
+    text-decoration: none;
+    background-color: #DD0330 ;
+    color: #FFFFFF;
+}
+
+.separted-nav-item {
+    margin: 0 2px;
+}
+
+.small-menu {
+    margin: -10px -5px;
+}
+
+.menu-item:hover {
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+.main-panel {
+    height: 100%;
+}
+
+aside {
+    background-color: #777;
+}
+
+.aside-max-size {
+    max-width: 200px;
+}
+
+.banner {
+    width: calc(100% - 20px);
+    background-color: #555;
+    margin: 10px;
+}
+
+.fixed-size-banner {
+    height: 100px;
+}
+
+footer {
+    background-color: #263238;
+    background-image: url("assets/images/angular_whiteTransparent.png");
+    background-repeat: no-repeat;
+    background-size: 70px;
+    background-position-x: 20px;
+}
+
+.social-icon {
+    color: #eee;
+    margin: 10px;
+}
+
+.copyright-text {
+    color: #aaa;
+    font-size: smaller;
+}
+
+.centered {
+    margin: 0 auto;
+}
+
+.small-logo {
+    margin-top: 15px;
+    order: 1;
+}

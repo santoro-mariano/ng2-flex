@@ -1,0 +1,56 @@
+@mixin display-flex() {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+
+@mixin flex($value) {
+    -webkit-box-flex: $value;
+       -moz-box-flex: $value;
+        -webkit-flex: $value;
+            -ms-flex: $value;
+                flex: $value;
+}
+
+@mixin flex-direction($value) {
+    -webkit-box-flex-direction: $value;
+       -moz-box-flex-direction: $value;
+        -webkit-flex-direction: $value;
+            -ms-flex-direction: $value;
+                flex-direction: $value;
+}
+
+@mixin align-items($value) {
+    -webkit-box-align: $value;
+       -moz-box-align: $value;
+       -ms-flex-align: $value;
+  -webkit-align-items: $value;
+          align-items: $value;
+}
+
+@mixin justify-content($value) {
+       -webkit-box-pack: $value;
+          -moz-box-pack: $value;
+          -ms-flex-pack: $value;
+-webkit-justify-content: $value;
+        justify-content: $value;
+}
+
+@mixin flex-wrap($value) {
+    -webkit-box-flex-wrap: $value;
+       -moz-box-flex-wrap: $value;
+        -webkit-flex-wrap: $value;
+            -ms-flex-wrap: $value;
+                flex-wrap: $value;
+}
+
+@mixin align-content($value) {
+    -webkit-box-line-pack: $value;
+       -moz-box-line-pack: $value;
+       -ms-flex-line-pack: $value;
+    -webkit-align-content: $value;
+            align-content: $value;
+}

@@ -5,7 +5,7 @@
   },
   "apps": [
     {
-      "root": "src",
+      "root": "src/demoApp",
       "outDir": "dist",
       "assets": [
         "assets",
@@ -17,7 +17,7 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
+      "prefix": "flx",
       "styles": [
         "styles.scss"
       ],
@@ -36,11 +36,11 @@
   },
   "lint": [
     {
-      "project": "src/tsconfig.app.json",
+      "project": "src/demoApp/tsconfig.app.json",
       "exclude": "**/node_modules/**"
     },
     {
-      "project": "src/tsconfig.spec.json",
+      "project": "src/demoApp/tsconfig.spec.json",
       "exclude": "**/node_modules/**"
     },
     {
