@@ -1,27 +1,240 @@
-# Ng2Flex
+# Flexbox Layout Library for Angular 2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+[![Join the chat at https://gitter.im/ng2-flex/Lobby](https://badges.gitter.im/ng2-flex/Lobby.svg)](https://gitter.im/ng2-flex/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![npm version](https://badge.fury.io/js/ng2-flex.svg)](https://badge.fury.io/js/ng2-flex)
 
-## Development server
+This library was made with the intention to help software developers that wants a simple layout system out of the box for Angular 2. This library uses Flexbox, so the compatibility with old browsers is limited.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation/Setup
 
-## Code scaffolding
+### Install with NPM
+Install with npm `npm install --save ng2-flex`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Add Module as a Dependency to Your App
+Import `FlexModule` and add it to the `imports` of your app's `AppModule`
+```javascript
+// src/app/app.module.ts
 
-## Build
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { FlexModule } from 'ng2-flex';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+import { AppComponent } from './app.component';
 
-## Running unit tests
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    FlexModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+## Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Container
 
-## Running end-to-end tests
+You need to specify the `flxContainer` as the first element in your html body.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Example:
+```html
+<flxContainer>
+  ...
+</flxContainer>
+```
 
-## Further help
+Example: DIV as container
+```html
+<div flxContainer>
+  ...
+</div>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Grid System
+
+Grid system is compound of three components:
+
+The `flxGrid` allows you to generate a Grid Layout System. Inside of this component we add rows using the `flxRow` component and, inside of those rows, we add the columns using the `flxColumn` component.
+
+Example:
+```html
+<flxGrid>
+  <flxRow>
+    Header
+  </flxRow>
+  <flxRow>
+    <flxColumn>Main Content</flxColumn>
+    <flxColumn>Side bar</flxColumn>
+  </flxRow>
+  <flxRow>
+    Footer
+  </flxRow>
+</flxGrid>
+```
+
+Example (using HTML5 elements):
+```html
+<flxGrid>
+  <header flxRow>
+    Header
+  </header>
+  <flxRow>
+    <main flxColumn>Main Content</main>
+    <aside flxColumn>Side bar</aside>
+  </flxRow>
+  <footer flxRow>
+    Footer
+  </footer>
+</flxGrid>
+```
+
+#### Properties of flxRow and flxColumn
+
+* size
+  * Type: `string|SizeMapping`
+  * Description: Size of the Row/Column in pixels or percentage of the parent. The size can be a string or a instance of [SizeMapping](http://www.test.com) object.
+  * Example: 
+  ```html
+  <flxRow [size]="'50%'"></flxRow>
+  <flxColumn [size]="'100px'"></flxColumn>
+  <flxRow [size]="{small: '20%', medium: '30%'}"></flxRow>
+  ```
+
+* switchSize
+  * Type: `string`
+  * Description: Device size when the row shows inside elements as column and column shows inside elements as row.
+  * Available values: 
+    * extraSmall
+    * small
+    * medium
+    * large
+  * Example:
+  ```html
+  ```
+
+* separation
+  * Type: `string`
+  * Description: How inner elements distribute extra space in the main axis (Row: X Axis, Column: Y Axis).
+  * Available values: 
+    * between
+    * all
+  * Example:
+  ```html
+  ```
+
+* wrap
+  * Type: `string`
+  * Description:
+  * Available values:
+    * nowrap
+    * wrap
+    * wrapReverse 
+  * Example:
+  ```html
+  ```
+
+* wrapAlignment
+  * Type: `string`
+  * Description:
+  * Available values:
+    * start
+    * center
+    * end
+    * stretch
+    * all
+    * between
+  * Example:
+  ```html
+  ```
+
+* horizontalAlignment
+  * Type: `string`
+  * Description:
+  * Available values:
+    * left
+    * center
+    * right
+  * Example:
+  ```html
+  ```
+
+* verticalAlignment
+  * Type: `string`
+  * Description:
+  * Available values:
+    * top
+    * center
+    * bottom
+  * Example:
+  ```html
+  ```
+
+* order
+  * Type: `number|SizeMapping`
+  * Description:
+  * Example:
+  ```html
+  ```
+
+### Structural Directives
+
+#### flxSize
+
+It allow us to **load** an element in the DOM when the device size is the same than the specified in the directive. Is the same behavior that has `ngIf` directive but with a device size instead of a boolean value.
+
+Example:
+```html
+```
+
+#### flxMaxSize
+It allow us to **load** an element in the DOM while the device size is less than or equal that the specified in the directive.
+
+Example:
+```html
+```
+
+#### flxMinSize
+It allow us to **load** an element in the DOM while the device size is more than or equal that the specified in the directive.
+
+Example:
+```html
+```
+
+### Attribute Directives
+
+#### flxClass
+It allow us to set classes for different device sizes. Is the same behavior that has `ngClass` but we specify device sizes instead of boolean values.
+We can add more than one size for the same class with the pipe `|` character as a separator.
+
+Example:
+```html
+```
+
+### Pipes
+
+#### checkSize
+ * Input: `DeviceSize`
+ * Output: `boolean`
+ * Params: allowedSizes - `string`
+ * Description:
+
+#### deviceSize
+ * Input: `string`
+ * Output: `DeviceSize`
+ * Params: N/A
+ * Description:
+
+#### sizeMap
+ * Input: `object`
+ * Output: `SizeMapping`
+ * Params: N/A
+ * Description:
+ 
