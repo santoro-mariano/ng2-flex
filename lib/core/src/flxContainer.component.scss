@@ -1,0 +1,114 @@
+@import "../../scss/_mixins";
+
+.ng2flex {
+    &-hidden {
+        display: none!important;
+    }
+
+    &-full-viewport {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    &-container {
+        @include display-flex();
+
+        &-child {
+            @include flex(1 1 auto);
+        }
+    }
+
+    &-vertical {
+        &-container {
+            @include flex-direction(column);
+        }
+
+        &-container-reverse {
+            @include flex-direction(column-reverse);
+        }
+    }
+
+    &-horizontal {
+        &-container {
+            @include flex-direction(row);
+        }
+
+        &-container-reverse {
+            @include flex-direction(row-reverse);
+        }
+    }
+
+    &-horizontal
+    
+    &-col-top, &-row-left {
+        @include justify-content(flex-start);
+    }
+
+    &-col-v-center, &-row-h-center {
+        @include justify-content(center);
+    }
+
+    &-col-bottom, &-row-right {
+        @include justify-content(flex-end);
+    }
+
+    &-col-left, &-row-top {
+        @include align-items(flex-start);
+    }
+
+    &-col-h-center, &-row-v-center {
+        @include align-items(center);
+    }
+
+    &-col-right, &-row-bottom {
+        @include align-items(flex-end);
+    }
+
+    &-itm {
+        &-separation-all {
+            @include justify-content(space-around);
+        }
+
+        &-separation-between {
+            @include justify-content(space-between);
+        }
+
+        &-nowrap {
+            @include flex-wrap(nowrap);
+        }
+
+        &-wrap {
+            @include flex-wrap(wrap);
+        }
+
+        &-wrap-reverse {
+            @include flex-wrap(wrap-reverse);
+        }
+    }
+
+    &-wrap {
+        &-start {
+            @include align-content(flex-start);
+        }
+
+        &-end {
+            @include align-content(flex-end);
+        }
+
+        &-center {
+            @include align-content(center);
+        }
+
+        &-stretch {
+            @include align-content(stretch);
+        }
+
+        &-all {
+            @include align-content(space-around);
+        }
+
+        &-between {
+            @include align-content(space-between);
+        }
+    }
+}
