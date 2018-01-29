@@ -7,8 +7,9 @@ import { FlexService, DeviceSize } from "../../../lib/core/public_api";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-    private deviceSize = DeviceSize;
 
-    constructor(private service: FlexService) {
+   deviceSize = DeviceSize;
+
+    constructor(public service: FlexService) {
     }
 }

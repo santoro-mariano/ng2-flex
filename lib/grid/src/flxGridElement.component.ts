@@ -1,7 +1,7 @@
 import { Component, Input } from "@angular/core";
 
 import { FlxBaseComponent } from "../../core/src/flxBase.component";
-import { DeviceSize, FlexService, Orientation } from "../../core";
+import { FlexService, DeviceSize, Orientation } from "../../core";
 
 @Component({template: ""})
 export class FlxGridElementComponent extends FlxBaseComponent {
@@ -27,7 +27,7 @@ export class FlxGridElementComponent extends FlxBaseComponent {
     }
 
     protected initialize(originalOrientation: Orientation): void {
-        this.orientation = originalOrientation;
+        this.orientation = this.originalOrientation = originalOrientation;
     }
 
     private updateSwitchOrientation() {
