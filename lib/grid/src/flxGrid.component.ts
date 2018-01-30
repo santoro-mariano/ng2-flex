@@ -1,7 +1,6 @@
 import { Component, HostBinding, ElementRef, Renderer  } from "@angular/core";
 
-import { FlxBaseComponent } from "../../core/src/flxBase.component";
-import { FlexService, Orientation } from "../../core";
+import { FlexService, Orientation, FlxBaseComponent } from "../../core";
 
 
 @Component({

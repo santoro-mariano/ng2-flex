@@ -14,7 +14,6 @@ import { FlexModule } from "../../../lib/public_api";
     BrowserModule,
     FlexModule.forRoot()
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

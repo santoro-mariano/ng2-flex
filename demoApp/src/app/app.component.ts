@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
-import { FlexService, DeviceSize } from "../../../lib/core/public_api";
+
+import { FlexService, DeviceSize } from "../../../lib/public_api";
 
 @Component({
   selector: "app-root",

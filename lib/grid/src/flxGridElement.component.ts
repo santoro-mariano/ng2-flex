@@ -1,7 +1,6 @@
 import { Component, Input } from "@angular/core";
 
-import { FlxBaseComponent } from "../../core/src/flxBase.component";
-import { FlexService, DeviceSize, Orientation } from "../../core";
+import { FlexService, DeviceSize, Orientation, FlxBaseComponent } from "../../core";
 
 @Component({template: ""})
 export class FlxGridElementComponent extends FlxBaseComponent {
