@@ -2,7 +2,7 @@
 {
     "name": "ng2-flex",
     "description": "Flexbox Layout System for Angular 2",
-    "version": "1.0.0-alpha.10",
+    "version": "1.0.0-alpha.12",
     "license": "MIT",
     "homepage": "https://github.com/santoro-mariano/ng2-flex",
     "bugs": "https://github.com/santoro-mariano/ng2-flex/issues",

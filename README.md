@@ -31,7 +31,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    FlexModule
+    FlexModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -46,14 +46,14 @@ You need to specify the `flxContainer` as the first element in your html body.
 
 Example:
 ```html
-<flxContainer>
+<flx-container>
   ...
-</flxContainer>
+</flx-container>
 ```
 
 Example: DIV as container
 ```html
-<div flxContainer>
+<div flx-container>
   ...
 </div>
 ```
@@ -62,50 +62,50 @@ Example: DIV as container
 
 Grid system is compound of three components:
 
-The `flxGrid` allows you to generate a Grid Layout System. Inside of this component we add rows using the `flxRow` component and, inside of those rows, we add the columns using the `flxColumn` component.
+The `flx-grid` allows you to generate a Grid Layout System. Inside of this component we add rows using the `flx-row` component and, inside of those rows, we add the columns using the `flx-column` component.
 
 Example:
 ```html
-<flxGrid>
-  <flxRow>
+<flx-grid>
+  <flx-row>
     Header
-  </flxRow>
-  <flxRow>
-    <flxColumn>Main Content</flxColumn>
-    <flxColumn>Side bar</flxColumn>
-  </flxRow>
-  <flxRow>
+  </flx-row>
+  <flx-row>
+    <flx-column>Main Content</flx-column>
+    <flx-column>Side bar</flx-column>
+  </flx-row>
+  <flx-row>
     Footer
-  </flxRow>
-</flxGrid>
+  </flx-row>
+</flx-grid>
 ```
 
 Example (using HTML5 elements):
 ```html
-<flxGrid>
-  <header flxRow>
+<flx-grid>
+  <header flx-row>
     Header
   </header>
   <flxRow>
-    <main flxColumn>Main Content</main>
-    <aside flxColumn>Side bar</aside>
+    <main flx-column>Main Content</main>
+    <aside flx-column>Side bar</aside>
   </flxRow>
-  <footer flxRow>
+  <footer flx-row>
     Footer
   </footer>
 </flxGrid>
 ```
 
-#### Properties of flxRow and flxColumn
+#### Properties of flx-row and flx-column
 
 * size
   * Type: `string|SizeMapping`
-  * Description: Size of the Row/Column in pixels or percentage of the parent. The size can be a string or a instance of [SizeMapping](http://www.test.com) object.
+  * Description: Size of the Row/Column in pixels or percentage of the parent. The size can be a string or a instance of [SizeMapping](http://) object.
   * Example: 
   ```html
-  <flxRow [size]="'50%'"></flxRow>
-  <flxColumn [size]="'100px'"></flxColumn>
-  <flxRow [size]="{small: '20%', medium: '30%'}"></flxRow>
+  <flx-row [size]="'50%'"></flx-row>
+  <flx-column [size]="'100px'"></flx-column>
+  <flx-row [size]="{small: '20%', medium: '30%'}"></flx-row>
   ```
 
 * switchSize
